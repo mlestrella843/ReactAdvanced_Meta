@@ -2,30 +2,31 @@ import React from 'react';
 import './index.css';
 // import { FeedbackForm } from './components/feedback-form';
 // import CoffeeShopMenu from './components/lemon-coffee-shop';
-import { DessertsList } from './components/desserts-list';
+// import { DessertsList } from './components/desserts-list';
+import {Form} from './components/controlled';
 
-const desserts = [
-  {
-    name: "Chocolate Cake",
-    calories: 400,
-    createdAt: "2022-09-01",
-  },
-  {
-    name: "Ice Cream",
-    calories: 200,
-    createdAt: "2022-01-02",
-  },
-  {
-    name: "Tiramisu",
-    calories: 300,
-    createdAt: "2021-10-03",
-  },
-  {
-    name: "Cheesecake",
-    calories: 600,
-    createdAt: "2022-01-04",
-  },
-];
+// const desserts = [
+//   {
+//     name: "Chocolate Cake",
+//     calories: 400,
+//     createdAt: "2022-09-01",
+//   },
+//   {
+//     name: "Ice Cream",
+//     calories: 200,
+//     createdAt: "2022-01-02",
+//   },
+//   {
+//     name: "Tiramisu",
+//     calories: 300,
+//     createdAt: "2021-10-03",
+//   },
+//   {
+//     name: "Cheesecake",
+//     calories: 600,
+//     createdAt: "2022-01-04",
+//   },
+// ];
 
 function App() {
   return (
@@ -34,7 +35,9 @@ function App() {
       {/* <FeedbackForm /> */}
       {/* <CoffeeShopMenu /> */}
       <h2 className=" text-pink-400 font-sans font-bold">List of Low Calorie Desserts:</h2>
-      <DessertsList data={desserts} />
+      {/* <DessertsList data={desserts} /> */}
+      <h3 className=" text-pink-400 font-sans font-bold"> Form </h3>
+      <Form />
     </div>
   );
 }
