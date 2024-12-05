@@ -7,9 +7,6 @@
 //           <label htmlFor="name">Name:</label>
 //           <input type="text" placeholder="Name" name="name" />
 //         </div>
-
-import { useState } from "react";
-
 //         <button type="submit">Submit</button>
 //       </form>
 //     </div>
@@ -19,6 +16,7 @@ import { useState } from "react";
 
 // Transforming into controlled components
 
+import { useState } from "react";
 function FormNonControlToControl() {
   const [name, setName] = useState("");
 
