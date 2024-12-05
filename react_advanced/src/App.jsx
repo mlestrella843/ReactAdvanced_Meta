@@ -3,7 +3,8 @@ import './index.css';
 // import { FeedbackForm } from './components/feedback-form';
 // import CoffeeShopMenu from './components/lemon-coffee-shop';
 // import { DessertsList } from './components/desserts-list';
-import {Form} from './components/controlled';
+import {Form} from './components/form_controlled';
+import { FormNonControlToControl } from './components/form_uncont_controll';
 
 // const desserts = [
 //   {
@@ -34,10 +35,12 @@ function App() {
       {/* <h2>Welcome to App Controlled Form</h2> */}
       {/* <FeedbackForm /> */}
       {/* <CoffeeShopMenu /> */}
-      <h2 className=" text-pink-400 font-sans font-bold">List of Low Calorie Desserts:</h2>
+      {/* <h2 className=" text-pink-400 font-sans font-bold">List of Low Calorie Desserts:</h2> */}
       {/* <DessertsList data={desserts} /> */}
-      <h3 className=" text-pink-400 font-sans font-bold"> Form </h3>
-      <Form />
+      {/* <h3 className=" text-pink-400 font-sans font-bold"> Form </h3> */}
+      {/* <Form /> */}
+      <FormNonControlToControl />
+
     </div>
   );
 }

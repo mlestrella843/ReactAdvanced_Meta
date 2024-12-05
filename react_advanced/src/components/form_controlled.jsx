@@ -19,4 +19,4 @@ const Form = () => {
     </form>
   );
 };
-export {Form};
+export { Form };
