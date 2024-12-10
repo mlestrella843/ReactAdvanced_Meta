@@ -1,7 +1,8 @@
 import React from 'react';
 import './index.css';
-import { FeedbackForm } from './components/feedback-form';
-import { FormApp } from './components/registration-form';
+// import { FeedbackForm } from './components/feedback-form';
+// import { FormApp } from './components/registration-form';
+import { GreetClients } from './components/hooks';
 // import CoffeeShopMenu from './components/lemon-coffee-shop';
 // import { DessertsList } from './components/desserts-list';
 // import {Form} from './components/form_controlled';
@@ -41,7 +42,8 @@ function App() {
       {/* <h3 className=" text-pink-400 font-sans font-bold"> Form </h3> */}
       {/* <Form /> */}
       {/* <FormNonControlToControl /> */}
-      <FormApp />
+      {/* <FormApp /> */}
+      <GreetClients />
 
     </div>
   );
