@@ -7,6 +7,7 @@ import { GreetClients } from './components/hooks';
 // import { DessertsList } from './components/desserts-list';
 // import {Form} from './components/form_controlled';
 // import { FormNonControlToControl } from './components/form_uncont_controll';
+import Lab from './components/labHooksObjects';
 
 // const desserts = [
 //   {
@@ -43,7 +44,8 @@ function App() {
       {/* <Form /> */}
       {/* <FormNonControlToControl /> */}
       {/* <FormApp /> */}
-      <GreetClients />
+      {/* <GreetClients /> */}
+      <Lab />
 
     </div>
   );
