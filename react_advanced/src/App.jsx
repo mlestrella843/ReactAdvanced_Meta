@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.css';
+import { FetchData } from './components/script';
 // import { FeedbackForm } from './components/feedback-form';
 // import { FormApp } from './components/registration-form';
 // import { GreetClients } from './components/hooks';
@@ -8,7 +9,8 @@ import './index.css';
 // import {Form} from './components/form_controlled';
 // import { FormNonControlToControl } from './components/form_uncont_controll';
 // import Lab from './components/labHooksObjects';
-import { HookUSeEffect } from './components/sideEffectsHook';
+// import { HookUSeEffect } from './components/sideEffectsHook';
+
 
 // const desserts = [
 //   {
@@ -47,7 +49,8 @@ function App() {
       {/* <FormApp /> */}
       {/* <GreetClients /> */}
       {/* <Lab /> */}
-      <HookUSeEffect />
+      {/* <HookUSeEffect /> */}
+      <FetchData />
 
     </div>
   );
