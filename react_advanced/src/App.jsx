@@ -1,7 +1,8 @@
 import React from 'react';
 import './index.css';
 // import FetchWithUseEffect from './components/fetch-with-useEffects';
-import { FetchLab } from './components/fetch-lab';
+// import { FetchLab } from './components/fetch-lab';
+import { CounterApp } from './components/counter-app';
 // import { FetchData } from './components/fetch-with-hooks';
 // import { FeedbackForm } from './components/feedback-form';
 // import { FormApp } from './components/registration-form';
@@ -54,7 +55,8 @@ function App() {
       {/* <HookUSeEffect /> */}
       {/* <FetchData /> */}
       {/* <FetchWithUseEffect /> */}
-      <FetchLab />
+      {/* <FetchLab /> */}
+      <CounterApp />
 
     </div>
   );
