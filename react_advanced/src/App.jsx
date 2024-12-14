@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.css';
+import { Counter } from './components/useReducer';
 // import FetchWithUseEffect from './components/fetch-with-useEffects';
 // import { FetchLab } from './components/fetch-lab';
 // import { CounterApp } from './components/counter-app';
@@ -13,7 +14,7 @@ import './index.css';
 // import { FormNonControlToControl } from './components/form_uncont_controll';
 // import Lab from './components/labHooksObjects';
 // import { HookUSeEffect } from './components/sideEffectsHook';
-import { LabCustom } from './components/CustomHooks/useCustom-lab';
+// import { LabCustom } from './components/CustomHooks/useCustom-lab';
 
 
 // const desserts = [
@@ -58,7 +59,8 @@ function App() {
       {/* <FetchWithUseEffect /> */}
       {/* <FetchLab /> */}
       {/* <CounterApp /> */}
-      <LabCustom />
+      {/* <LabCustom /> */}
+      <Counter />
 
     </div>
   );
