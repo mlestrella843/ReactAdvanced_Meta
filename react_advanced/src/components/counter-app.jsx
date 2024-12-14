@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useConsoleLogHook } from './useCustom-hook';
+import { useConsoleLogHook } from './CustomHooks/useCustom-hook';
 
 const CounterApp = () => {
     const [count, setCount] = useState(0);
