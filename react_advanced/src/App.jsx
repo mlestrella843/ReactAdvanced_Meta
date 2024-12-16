@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.css';
-import { Counter } from './components/useReducer';
+import { LiveOrders } from './components/react-clone-children';
+// import { Counter } from './components/useReducer';
 // import FetchWithUseEffect from './components/fetch-with-useEffects';
 // import { FetchLab } from './components/fetch-lab';
 // import { CounterApp } from './components/counter-app';
@@ -60,7 +61,8 @@ function App() {
       {/* <FetchLab /> */}
       {/* <CounterApp /> */}
       {/* <LabCustom /> */}
-      <Counter />
+      {/* <Counter /> */}
+      <LiveOrders />
 
     </div>
   );
