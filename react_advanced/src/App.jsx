@@ -41,33 +41,67 @@ import { LiveOrders } from './components/react-clone-children';
 //   },
 // ];
 
-function App() {
-  return (
-    <div className="w-full max-w-screen-lg mx-auto px-4 mt-4">
-      {/* <h2>Welcome to App Controlled Form</h2> */}
-      {/* <FeedbackForm /> */}
-      {/* <CoffeeShopMenu /> */}
-      {/* <h2 className=" text-pink-400 font-sans font-bold">List of Low Calorie Desserts:</h2> */}
-      {/* <DessertsList data={desserts} /> */}
-      {/* <h3 className=" text-pink-400 font-sans font-bold"> Form </h3> */}
-      {/* <Form /> */}
-      {/* <FormNonControlToControl /> */}
-      {/* <FormApp /> */}
-      {/* <GreetClients /> */}
-      {/* <Lab /> */}
-      {/* <HookUSeEffect /> */}
-      {/* <FetchData /> */}
-      {/* <FetchWithUseEffect /> */}
-      {/* <FetchLab /> */}
-      {/* <CounterApp /> */}
-      {/* <LabCustom /> */}
-      {/* <Counter /> */}
-      <LiveOrders />
+// function App() {
+//   return (
+//     <div className="w-full max-w-screen-lg mx-auto px-4 mt-4">
+//       {/* <h2>Welcome to App Controlled Form</h2> */}
+//       {/* <FeedbackForm /> */}
+//       {/* <CoffeeShopMenu /> */}
+//       {/* <h2 className=" text-pink-400 font-sans font-bold">List of Low Calorie Desserts:</h2> */}
+//       {/* <DessertsList data={desserts} /> */}
+//       {/* <h3 className=" text-pink-400 font-sans font-bold"> Form </h3> */}
+//       {/* <Form /> */}
+//       {/* <FormNonControlToControl /> */}
+//       {/* <FormApp /> */}
+//       {/* <GreetClients /> */}
+//       {/* <Lab /> */}
+//       {/* <HookUSeEffect /> */}
+//       {/* <FetchData /> */}
+//       {/* <FetchWithUseEffect /> */}
+//       {/* <FetchLab /> */}
+//       {/* <CounterApp /> */}
+//       {/* <LabCustom /> */}
+//       {/* <Counter /> */}
+//       <LiveOrders />
 
+//     </div>
+//   );
+// }
+// export default App;
+
+
+
+import "./App.css";
+import { RadioGroup, RadioOption } from "./Radio";
+import { useState } from "react";
+
+function App() {
+  const [selected, setSelected] = useState("");
+  return (
+    <div className="App min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="bg-white p-8 rounded-lg shadow-md max-w-md w-full">
+        <h2 className="text-2xl font-semibold mb-6 text-center text-gray-800">
+          How did you hear about Little Lemon?
+        </h2>
+        <RadioGroup onChange={setSelected} selected={selected}>
+          <RadioOption value="social_media">Social Media</RadioOption>
+          <RadioOption value="friends">Friends</RadioOption>
+          <RadioOption value="advertising">Advertising</RadioOption>
+          <RadioOption value="other">Other</RadioOption>
+        </RadioGroup>
+        <button
+          disabled={!selected}
+          className={`mt-6 w-full py-2 px-4 rounded-md text-white font-semibold ${
+            selected
+              ? "bg-blue-600 hover:bg-blue-700 cursor-pointer"
+              : "bg-gray-300 cursor-not-allowed"
+          }`}
+        >
+          Submit
+        </button>
+      </div>
     </div>
   );
 }
+
 export default App;
-
-
-
