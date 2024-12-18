@@ -71,28 +71,23 @@ import './index.css';
 // }
 // export default App;
 
-// Using HOC using Cross Cutting
-import { ProtectedAdminPanel } from './components/cross-cutting-2';
-function App() {
-  const user = { username: "Marie-Louise", isAuthenticated: true }; // Simula el estado del usuario
+// // Using HOC using Cross Cutting
+// import { ProtectedAdminPanel } from './components/cross-cutting-2';
+// function App() {
+//   const user = { username: "Marie-Louise", isAuthenticated: true }; // Simula el estado del usuario
 
-  return (
-    <div className="w-full max-w-screen-lg mx-auto px-4 mt-4">
-      {/* <UserProfileWithLogging name="John Doe" />
-      <UserProfileWithLogging name="Jane Doe" /> */}
-      <ProtectedAdminPanel
-        isAuthenticated={user.isAuthenticated}
-        username={user.username}
-      />
-    </div>
-  );
-}
-
-export default App;
-
-
-
-
+//   return (
+//     <div className="w-full max-w-screen-lg mx-auto px-4 mt-4">
+//       {/* <UserProfileWithLogging name="John Doe" />
+//       <UserProfileWithLogging name="Jane Doe" /> */}
+//       <ProtectedAdminPanel
+//         isAuthenticated={user.isAuthenticated}
+//         username={user.username}
+//       />
+//     </div>
+//   );
+// }
+// export default App;
 
 
 // Using React.cloneElement and react.Children
@@ -130,3 +125,21 @@ export default App;
 // }
 
 // export default App;
+import { PanelMouseLogger, PanelMouseTracker, PointMouseLogger, PointMouseTracker } from './cross-cutting-hoc-3';
+
+function App() {
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
+      <header className="bg-yellow-500 text-white text-2xl font-bold py-4 px-6 rounded-md shadow-md mb-6">
+        Little Lemon Restaurant
+      </header>
+      <div className="space-y-6">
+        <PanelMouseTracker />
+        <PointMouseTracker />
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
