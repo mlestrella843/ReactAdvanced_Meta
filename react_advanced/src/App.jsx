@@ -125,21 +125,46 @@ import './index.css';
 // }
 
 // export default App;
-import { PanelMouseLogger, PanelMouseTracker, PointMouseLogger, PointMouseTracker } from './cross-cutting-hoc-3';
+
+//Using Cross-cutting HOC para hacer track a la posicion del mouse. Lo cual ayudara a saber que los
+// o cuales fotos son mas llamativas para los usuarios-clientes del Restaturant.
+// import { PanelMouseLogger, PanelMouseTracker, PointMouseLogger, PointMouseTracker } from './components/cross-cutting-hoc-3';
+// function App() {
+//   return (
+//     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
+//       <header className="bg-yellow-500 text-white text-2xl font-bold py-4 px-6 rounded-md shadow-md mb-6">
+//         Little Lemon Restaurant
+//       </header>
+//       <div className="space-y-6">
+//         <PanelMouseTracker />
+//         <PointMouseTracker />
+//       </div>
+//     </div>
+//   );
+// }
+// export default App;
+
+
+
+
+import { PanelMouseLogger, PointMouseLogger } from './components/render-props';
+import { MouseTracker } from './components/render-props';
+
 
 function App() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
-      <header className="bg-yellow-500 text-white text-2xl font-bold py-4 px-6 rounded-md shadow-md mb-6">
+      <header className="bg-green-500 text-white text-2xl font-bold py-4 px-6 rounded-md shadow-md mb-6">
         Little Lemon Restaurant
       </header>
-      <div className="space-y-6">
-        <PanelMouseTracker />
-        <PointMouseTracker />
-      </div>
+      <MouseTracker
+        render={(mousePosition) => <PanelMouseLogger  mousePosition={mousePosition} />}
+      />
+      <MouseTracker
+        render={(mousePosition) => <PointMouseLogger mousePosition={mousePosition} />}
+      />
     </div>
   );
 }
 
 export default App;
-
