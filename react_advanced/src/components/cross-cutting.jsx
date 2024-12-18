@@ -12,4 +12,4 @@ function UserProfile({ name }) {
     return <h1>Hello, {name}!</h1>;
   }
 
-  export const UserProfileWithLogging = withLogging(UserProfile);
+export const UserProfileWithLogging = withLogging(UserProfile);

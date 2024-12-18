@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 // import { LiveOrders } from './components/react-clone-children';
-import { UserProfileWithLogging } from './components/cross-cutting';
+// import { UserProfileWithLogging } from './components/cross-cutting';
 // import { Counter } from './components/useReducer';
 // import FetchWithUseEffect from './components/fetch-with-useEffects';
 // import { FetchLab } from './components/fetch-lab';
@@ -64,6 +64,7 @@ import { UserProfileWithLogging } from './components/cross-cutting';
 //       {/* <LabCustom /> */}
 //       {/* <Counter /> */}
 //       {/* <LiveOrders /> */}
+         
 
 //     </div>
 //   );
@@ -71,11 +72,18 @@ import { UserProfileWithLogging } from './components/cross-cutting';
 // export default App;
 
 // Using HOC using Cross Cutting
+import { ProtectedAdminPanel } from './components/cross-cutting-2';
 function App() {
+  const user = { username: "Marie-Louise", isAuthenticated: true }; // Simula el estado del usuario
+
   return (
-    <div>
-      <UserProfileWithLogging name="JohnDoe" />
-      <UserProfileWithLogging name="JaneDoe" />
+    <div className="w-full max-w-screen-lg mx-auto px-4 mt-4">
+      {/* <UserProfileWithLogging name="John Doe" />
+      <UserProfileWithLogging name="Jane Doe" /> */}
+      <ProtectedAdminPanel
+        isAuthenticated={user.isAuthenticated}
+        username={user.username}
+      />
     </div>
   );
 }
