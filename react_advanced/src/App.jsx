@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.css';
-import { LiveOrders } from './components/react-clone-children';
+// import { LiveOrders } from './components/react-clone-children';
+import { UserProfileWithLogging } from './components/cross-cutting';
 // import { Counter } from './components/useReducer';
 // import FetchWithUseEffect from './components/fetch-with-useEffects';
 // import { FetchLab } from './components/fetch-lab';
@@ -62,46 +63,62 @@ import { LiveOrders } from './components/react-clone-children';
 //       {/* <CounterApp /> */}
 //       {/* <LabCustom /> */}
 //       {/* <Counter /> */}
-//       <LiveOrders />
+//       {/* <LiveOrders /> */}
 
 //     </div>
 //   );
 // }
 // export default App;
 
-
-
-import "./App.css";
-import { RadioGroup, RadioOption } from "./Radio";
-import { useState } from "react";
-
+// Using HOC using Cross Cutting
 function App() {
-  const [selected, setSelected] = useState("");
   return (
-    <div className="App min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-md max-w-md w-full">
-        <h2 className="text-2xl font-semibold mb-6 text-center text-gray-800">
-          How did you hear about Little Lemon?
-        </h2>
-        <RadioGroup onChange={setSelected} selected={selected}>
-          <RadioOption value="social_media">Social Media</RadioOption>
-          <RadioOption value="friends">Friends</RadioOption>
-          <RadioOption value="advertising">Advertising</RadioOption>
-          <RadioOption value="other">Other</RadioOption>
-        </RadioGroup>
-        <button
-          disabled={!selected}
-          className={`mt-6 w-full py-2 px-4 rounded-md text-white font-semibold ${
-            selected
-              ? "bg-blue-600 hover:bg-blue-700 cursor-pointer"
-              : "bg-gray-300 cursor-not-allowed"
-          }`}
-        >
-          Submit
-        </button>
-      </div>
+    <div>
+      <UserProfileWithLogging name="JohnDoe" />
+      <UserProfileWithLogging name="JaneDoe" />
     </div>
   );
 }
 
 export default App;
+
+
+
+
+
+
+// Using React.cloneElement and react.Children
+// import "./App.css";
+// import { RadioGroup, RadioOption } from "./Radio";
+// import { useState } from "react";
+
+// function App() {
+//   const [selected, setSelected] = useState("");
+//   return (
+//     <div className="App min-h-screen flex items-center justify-center bg-gray-100">
+//       <div className="bg-white p-8 rounded-lg shadow-md max-w-md w-full">
+//         <h2 className="text-2xl font-semibold mb-6 text-center text-gray-800">
+//           How did you hear about Little Lemon?
+//         </h2>
+//         <RadioGroup onChange={setSelected} selected={selected}>
+//           <RadioOption value="social_media">Social Media</RadioOption>
+//           <RadioOption value="friends">Friends</RadioOption>
+//           <RadioOption value="advertising">Advertising</RadioOption>
+//           <RadioOption value="other">Other</RadioOption>
+//         </RadioGroup>
+//         <button
+//           disabled={!selected}
+//           className={`mt-6 w-full py-2 px-4 rounded-md text-white font-semibold ${
+//             selected
+              // ? "bg-blue-600 hover:bg-blue-700 cursor-pointer"
+//               : "bg-gray-300 cursor-not-allowed"
+//           }`}
+//         >
+//           Submit
+//         </button>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default App;
