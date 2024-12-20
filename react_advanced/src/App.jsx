@@ -147,24 +147,38 @@ import './index.css';
 
 
 
-import { PanelMouseLogger, PointMouseLogger } from './components/render-props';
-import { MouseTracker } from './components/render-props';
+// import { PanelMouseLogger, PointMouseLogger } from './components/render-props';
+// import { MousePosition } from './components/render-props';
 
+// function App() {
+//   return (
+//     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
+//       <header className="bg-green-500 text-white text-2xl font-bold py-4 px-6 rounded-md shadow-md mb-6">
+//         Little Lemon Restaurant
+//       </header>
+//       <MousePosition
+//         render={(mousePosition) => <PanelMouseLogger  mousePosition={mousePosition} />}
+//       />
+//       <MousePosition
+//         render={(mousePosition) => <PointMouseLogger mousePosition={mousePosition} />}
+//       />
+//     </div>
+//   );
+// }
+// export default App;
+
+// Testing with Jest and React Library
+import { FeedbackForm } from './components/Testing_Jest_ReactL/FeedBackForm';
 
 function App() {
+  const handleSubmit = () => {
+    console.log("Form submitted!");
+  };
+
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
-      <header className="bg-green-500 text-white text-2xl font-bold py-4 px-6 rounded-md shadow-md mb-6">
-        Little Lemon Restaurant
-      </header>
-      <MouseTracker
-        render={(mousePosition) => <PanelMouseLogger  mousePosition={mousePosition} />}
-      />
-      <MouseTracker
-        render={(mousePosition) => <PointMouseLogger mousePosition={mousePosition} />}
-      />
+    <div className="App">
+      <FeedbackForm onSubmit={handleSubmit} />
     </div>
   );
 }
-
 export default App;
